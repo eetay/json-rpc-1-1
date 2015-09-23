@@ -78,7 +78,7 @@ module JsonRpcService
     class Error < RuntimeError; end
 
     attr_reader :procs
-    attr :disabled
+    attr_accessor :disabled
         
     # 
     # Sets up a new service. Raises exceptions if the service description is
