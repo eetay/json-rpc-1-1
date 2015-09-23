@@ -57,6 +57,7 @@ module JsonRpcService
     # It will be automatically included in the controller class.
     #
     def receive_json_rpc_request
+	binding.pry
       service = self.class.service
       render(:text => 'JSON-RPC server disabled', :status => 503) and return if service.disabled
       req = service.process request, params
